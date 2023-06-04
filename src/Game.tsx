@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/layout/Header';
 import { GameSection } from './components/layout/GameSection';
 import { StatusSection } from './components/layout/StatusSection';
-
 import { getUniqueSudoku } from './solver/UniqueSudoku';
 import { useSudokuContext } from './context/SudokuContext';
 
@@ -47,8 +46,6 @@ export const Game: React.FC<{}> = () => {
   function _fillCell(index: number, value: string) {
     if (initArray[index] === '0') {
       let tempArray = gameArray.slice();
-
-
       tempArray[index] = value;
       setGameArray(tempArray);
 
